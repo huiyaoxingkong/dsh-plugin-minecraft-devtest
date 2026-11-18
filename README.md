@@ -4,7 +4,6 @@
 
 # minecraft-devtest
 
-[![npm version](https://img.shields.io/npm/v/minecraft-devtest.svg)](https://www.npmjs.com/package/minecraft-devtest)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![GitHub](https://img.shields.io/badge/github-huiyaoxingkong%2Fminecraft--devtest-181717?logo=github)](https://github.com/huiyaoxingkong/minecraft-devtest)
 
@@ -134,11 +133,14 @@ npm run test:unit    # 不需要 Minecraft 服务端的离线单测
 
 把该目录作为 DSH bundle（`target=D:\path\to\minecraft-devtest`）安装即可。
 
-### 方式三：npm 包
+### 方式三：npm 包（包名已就绪，待发布）
 
 ```bash
 npm install minecraft-devtest
 ```
+
+> **发布状态**：截至 2026-11-19 npm 包尚未公开发布（机器上 npm 未登录），请先用方式一/方式二（GitHub 源码或本地目录）。
+> 维护者发布：本机 `npm login` 后执行 `npm publish`（包已通过 `npm pack --dry-run` 校验：`minecraft-devtest@0.4.0`，tarball 1.1MB）。
 
 npm 包面向两类用户：DSH 插件（`dsh.bundle.patch` 已包含）和希望在 Node 里直接复用
 `lib/` 模块的开发者。运行游戏/服务端相关能力仍需本机安装 Java 与测试服 jar。
