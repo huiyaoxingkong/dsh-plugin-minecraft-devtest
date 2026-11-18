@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "MC 免客户端测试台",
+    "description": "无客户端测试 Minecraft 模组与数据包：无头服务器控制、Mineflayer 玩家机器人、确定性测试卡与一键体检，常用检查内置在插件里以节省 token。"
+  }
+}

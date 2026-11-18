@@ -1,0 +1,111 @@
+{
+  "name": "upstream-26.3",
+  "vendorVersion": "upstream-26.3.2",
+  "generatedAt": "2026-11-14T10:58:47.586Z",
+  "minecraftVersions": {
+    "26.2": {
+      "protocol": 776,
+      "dataVersion": 4903
+    },
+    "26.3": {
+      "protocol": 777,
+      "dataVersion": 5023
+    },
+    "26.4": {
+      "kind": "best-effort-alias-of-26.3",
+      "placeholderProtocol": 777,
+      "dataVersion": 9000000
+    }
+  },
+  "nonVendoredDependencies": {
+    "protodef": "1.19.0 (already required by this plugin; the PR packages work with it unchanged)"
+  },
+  "packages": {
+    "minecraft-protocol": {
+      "version": "1.68.0",
+      "license": "BSD-3-Clause",
+      "source": {
+        "repo": "https://github.com/PrismarineJS/node-minecraft-protocol",
+        "fork": "https://github.com/suisarbre/node-minecraft-protocol",
+        "branch": "port-26.3",
+        "pullRequest": 1553,
+        "commit": "3473413d32ee09af55aa77579000391be3bb9753",
+        "note": "includes the entityDelta packet changes needed by 26.2/26.3"
+      },
+      "files": 40,
+      "treeSha256": "1010a1f3551d1fcd0356c03acc115323702677c2ed87c3aa52bacecdb461c34f"
+    },
+    "mineflayer": {
+      "version": "4.39.0",
+      "license": "MIT",
+      "source": {
+        "repo": "https://github.com/PrismarineJS/mineflayer",
+        "fork": "https://github.com/suisarbre/mineflayer",
+        "branch": "port-26.3",
+        "pullRequest": 4206,
+        "commit": "ad4af12611fd55309bb387b2b416212bffb0eddf"
+      },
+      "files": 59,
+      "treeSha256": "b0200f3260c87bdbdc664ccb2a215b8e05963a78a566e2f6ef3d3bd4bfde6ddb"
+    },
+    "prismarine-chunk": {
+      "version": "1.41.0",
+      "license": "MIT",
+      "source": {
+        "repo": "https://github.com/PrismarineJS/prismarine-chunk",
+        "fork": "https://github.com/suisarbre/prismarine-chunk",
+        "branch": "port-26.3",
+        "pullRequest": 347,
+        "commit": "a96fd7050163b5ae3cbce240deab453a03cd3bc2"
+      },
+      "files": 49,
+      "treeSha256": "af96ee3a6121b8b8c4f968aaf54465fca8bac0bf5c6eb3b316f9adeca8287b10"
+    },
+    "prismarine-physics": {
+      "version": "1.11.1",
+      "license": "MIT",
+      "source": {
+        "repo": "https://github.com/PrismarineJS/prismarine-physics",
+        "fork": "https://github.com/DallasCarraher/prismarine-physics",
+        "branch": "fix-liquid-gravity-26",
+        "pullRequest": 145,
+        "commit": "b928638645a56a110a51da1f2080c6455b27984a"
+      },
+      "files": 7,
+      "treeSha256": "f6443e84ed6e3933f260f0b75529f915b0023d85cbf82be7ebcb2d0186f3b56b"
+    }
+  },
+  "minecraftDataExtra": {
+    "package": "minecraft-data",
+    "packageVersion": "3.119.0",
+    "dataVersions": [
+      "26.2",
+      "26.3"
+    ],
+    "source": {
+      "repo": "https://github.com/PrismarineJS/minecraft-data",
+      "fork": "https://github.com/suisarbre/minecraft-data",
+      "branch": "port-26.3",
+      "pullRequest": 1345,
+      "stackedPullRequests": [
+        1301
+      ],
+      "note": "data/pc/26.2, data/pc/26.3 and data/pc/common/features.json"
+    },
+    "files": 43,
+    "treeSha256": "bc8477e0437db169cd0f430eea737d08fd6e0b59fc0b31a8874ac74a4073c01c",
+    "dataPaths": {
+      "file": "minecraft-data-extra/dataPaths.json",
+      "source": "dataPaths.json from the minecraft-data port-26.3 branch",
+      "mappedVersions": [
+        "26.2",
+        "26.3"
+      ],
+      "note": "Source of truth for data.js getter directories. 26.2 reuses 26.1 effects/enchantments/instruments; cross-version fallbacks are resolved against the installed package because published minecraft-data de-duplicates files (e.g. windows.json only ships in pc/1.16.1)."
+    }
+  },
+  "environment": {
+    "node": "24.16.0",
+    "platform": "win32"
+  }
+}

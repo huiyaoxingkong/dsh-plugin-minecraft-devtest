@@ -1,0 +1,19 @@
+id: S-003
+title: 服务端命令断言（时间 / gamerule）
+description: 不依赖数据包与机器人的纯 RCON 断言示例；需要服务器已在运行。
+steps:
+  - type: command
+    cmd: "gamerule doDaylightCycle false"
+    expect: { contains: "doDaylightCycle" }
+  - type: command
+    cmd: "gamerule doDaylightCycle"
+    expect: { contains: "false" }
+  - type: command
+    cmd: "time set 1000"
+    expect: { contains: "1000" }
+  - type: command
+    cmd: "time query daytime"
+    expect: { contains: "The time is" }
+  - type: command
+    cmd: "time query gametime"
+    expect: { contains: "The time is" }

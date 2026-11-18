@@ -1,0 +1,33 @@
+id: S-001
+title: 数据包冒烟（部署 + 重载 + load 函数 + 战利品表）
+description: 示例数据包 hello_mcdevtest 的免客户端端到端检查；需要 serverDir 参数（mcdt_test 传入）。
+steps:
+  - type: datapack
+    action: deploy
+    dir: "../datapacks/hello_mcdevtest"
+  - type: datapack
+    action: reload
+  - type: wait
+    ms: 1200
+  - type: command
+    cmd: "datapack list"
+    expect: { contains: "hello_mcdevtest" }
+  - type: command
+    cmd: "scoreboard players get #loaded mcdevtest"
+    expect: { contains: "1" }
+  - type: bot
+    action: join
+    params: { username: CardBot }
+  - type: command
+    cmd: "loot give CardBot loot mcdevtest:blocks/hello_block"
+    expect: { contains: "Dropped 1" }
+  - type: wait
+    ms: 600
+  - type: command
+    cmd: "recipe give CardBot mcdevtest:stone_button"
+    expect: { contains: "recipe" }
+  - type: command
+    cmd: "clear CardBot minecraft:diamond 0"
+    expect: { contains: "Found" }
+  - type: bot
+    action: leave

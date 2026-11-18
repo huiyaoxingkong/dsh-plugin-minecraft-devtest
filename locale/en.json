@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "MC headless test bench",
+    "description": "Test Minecraft mods and datapacks without a game client: headless server control, a Mineflayer player bot, deterministic test cards and one-call quick checks. Common checks are built in to save tokens."
+  }
+}

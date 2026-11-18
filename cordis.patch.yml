@@ -1,0 +1,5 @@
+# minecraft-devtest: client-free Minecraft mod/datapack test harness.
+- insert:
+    - id: minecraft-devtest
+      name: 'minecraft-devtest'
+      config: {}

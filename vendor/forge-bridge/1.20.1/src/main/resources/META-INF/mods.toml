@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+issueTrackerURL="https://github.com/deepseek-ai/dsh/issues"
+
+[[mods]]
+modId="dsh_test_bridge"
+version="0.1.0"
+displayName="DSH Test Bridge (Forge 1.20.1)"
+authors="DSH minecraft-devtest"
+description='''Server-side-only test utility for the DSH minecraft-devtest plugin.
+
+Lets vanilla-protocol clients (e.g. a Mineflayer test bot) join a modded Forge
+1.20.1 test server by forcing NetworkRegistry.acceptsVanillaClientConnections()
+to return true. It does NOT make modded blocks, items or entities work on a
+vanilla client, and it must never be installed on a public server.'''
+
+[[dependencies.dsh_test_bridge]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.dsh_test_bridge]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.21)"
+ordering="NONE"
+side="BOTH"

@@ -1,0 +1,33 @@
+id: S-002
+title: 玩家机器人冒烟（进服 / 聊天 / 状态 / 离开）
+description: 用 Mineflayer 机器人代替游戏客户端做玩家级检查；需要服务器已在运行（mcdt_server start）。
+steps:
+  - type: bot
+    action: join
+    params: { username: CardBot }
+  - type: assert
+    path: connected
+    op: eq
+    value: true
+  - type: bot
+    action: chat
+    params: { message: "hello from test card" }
+  - type: wait
+    ms: 800
+  - type: bot
+    action: state
+  - type: assert
+    path: position
+    op: exists
+  - type: assert
+    path: health
+    op: gt
+    value: 0
+  - type: bot
+    action: chat_history
+    params: { limit: 10 }
+  - type: assert
+    path: messages
+    op: exists
+  - type: bot
+    action: leave

@@ -1,0 +1,9 @@
+node_modules/
+.tmp/
+*.log
+!docs/evidence/*.log
+.DS_Store
+Thumbs.db
+*.dsh-backup
+dist/
+coverage/
