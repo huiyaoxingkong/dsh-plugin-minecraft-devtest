@@ -1,7 +1,7 @@
 # DSH Test Bridge — Forge 1.20.1 (`dsh_test_bridge` 0.1.0)
 
 A tiny, **server-side-only** Forge 1.20.1 mod used by the DSH
-`minecraft-devtest` plugin. It lets a **vanilla-protocol client** — such as a
+`dsh-plugin-minecraft-devtest` plugin. It lets a **vanilla-protocol client** — such as a
 Mineflayer test bot — complete the login and join a **modded Forge 1.20.1 test
 server**, so player-level tests can run against a Forge server without a real
 Forge client.

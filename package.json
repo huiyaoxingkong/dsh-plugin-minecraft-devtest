@@ -1,5 +1,5 @@
 {
-  "name": "minecraft-devtest",
+  "name": "dsh-plugin-minecraft-devtest",
   "version": "0.4.0",
   "description": "Client-free Minecraft mod and datapack development harness for DeepSeek Harness (DSH): headless server control across 1.7.10–26.4, RCON assertions, datapack validation/deploy/reload, Mineflayer and built-in legacy/26.x protocol bots, deterministic YAML test cards and one-call quick checks.",
   "license": "MIT",
@@ -47,14 +47,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/huiyaoxingkong/minecraft-devtest.git"
+    "url": "git+https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest.git"
   },
-  "homepage": "https://github.com/huiyaoxingkong/minecraft-devtest#readme",
+  "homepage": "https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest#readme",
   "bugs": {
-    "url": "https://github.com/huiyaoxingkong/minecraft-devtest/issues"
+    "url": "https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest/issues"
   },
   "engines": {
-    "node": ">=22.12.0"
+    "node": ">=22.12.0",
+    "dsh": ">=0.2.2-rc.1 <0.3.0"
   },
   "dsh": {
     "bundle": {

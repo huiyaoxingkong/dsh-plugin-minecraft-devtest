@@ -1,6 +1,6 @@
 # Third-party notices / 开源声明
 
-`minecraft-devtest` itself is licensed under the **MIT License** (see `LICENSE`).
+`dsh-plugin-minecraft-devtest` itself is licensed under the **MIT License** (see `LICENSE`).
 The plugin is an independent project. This file lists every open-source
 component that is redistributed with it, plus attribution for referenced work.
 

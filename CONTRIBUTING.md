@@ -1,12 +1,12 @@
 # Contributing
 
-Thanks for your interest in `minecraft-devtest`! This is a **test-only** harness;
+Thanks for your interest in `dsh-plugin-minecraft-devtest`! This is a **test-only** harness;
 please never point it at production servers.
 
 ## Development setup
 
 ```bash
-git clone https://github.com/huiyaoxingkong/minecraft-devtest.git
+git clone https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest.git
 cd minecraft-devtest
 npm install
 npm run check        # syntax check of the main modules

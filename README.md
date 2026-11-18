@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="./icon.svg" width="72" alt="minecraft-devtest">
+  <img src="./icon.svg" width="72" alt="dsh-plugin-minecraft-devtest">
 </p>
 
-# minecraft-devtest
+# dsh-plugin-minecraft-devtest
 
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![GitHub](https://img.shields.io/badge/github-huiyaoxingkong%2Fminecraft--devtest-181717?logo=github)](https://github.com/huiyaoxingkong/minecraft-devtest)
+[![GitHub](https://img.shields.io/badge/github-huiyaoxingkong%2Fdsh--plugin--minecraft--devtest-181717?logo=github)](https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest)
 
 **免游戏客户端**的 Minecraft 模组 / 数据包开发测试台，以 DeepSeek Harness（DSH）插件形式运行。
 
@@ -114,7 +114,7 @@ Mineflayer 官方只支持 1.8.8 以上、且协议数据通常滞后最新正�
 
 ```text
 plugin_manager action=install_bundle target=D:\path\to\minecraft-devtest
-plugin_manager action=install_bundle target=minecraft-devtest        # 发布到 npm 之后
+plugin_manager action=install_bundle target=dsh-plugin-minecraft-devtest  # 发布到 npm 之后
 ```
 
 安装后插件会注册 12 个 `mcdt_*` 工具。已在 **DSH 0.2.2-rc.5** 上验证；`peerDependencies` 为
@@ -124,8 +124,8 @@ plugin_manager action=install_bundle target=minecraft-devtest        # 发布到
 ### 方式二：本地开发 / 从源码
 
 ```bash
-git clone https://github.com/huiyaoxingkong/minecraft-devtest.git
-cd minecraft-devtest
+git clone https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest.git
+cd dsh-plugin-minecraft-devtest
 npm install          # 安装 mineflayer 等运行时依赖（首次约 1–2 分钟）
 npm run check        # 语法检查
 npm run test:unit    # 不需要 Minecraft 服务端的离线单测
@@ -136,11 +136,11 @@ npm run test:unit    # 不需要 Minecraft 服务端的离线单测
 ### 方式三：npm 包（包名已就绪，待发布）
 
 ```bash
-npm install minecraft-devtest
+npm install dsh-plugin-minecraft-devtest
 ```
 
 > **发布状态**：截至 2026-11-19 npm 包尚未公开发布（机器上 npm 未登录），请先用方式一/方式二（GitHub 源码或本地目录）。
-> 维护者发布：本机 `npm login` 后执行 `npm publish`（包已通过 `npm pack --dry-run` 校验：`minecraft-devtest@0.4.0`，tarball 1.1MB）。
+> 维护者发布：本机 `npm login` 后执行 `npm publish`（包已通过 `npm pack --dry-run` 校验：`dsh-plugin-minecraft-devtest@0.4.0`，tarball 1.1MB）。
 
 npm 包面向两类用户：DSH 插件（`dsh.bundle.patch` 已包含）和希望在 Node 里直接复用
 `lib/` 模块的开发者。运行游戏/服务端相关能力仍需本机安装 Java 与测试服 jar。

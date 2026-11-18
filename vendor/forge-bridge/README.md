@@ -1,6 +1,6 @@
 # forge-bridge — bundled Minecraft test-server bridges
 
-Server-side helper mods bundled with the `minecraft-devtest` plugin. They exist
+Server-side helper mods bundled with the `dsh-plugin-minecraft-devtest` plugin. They exist
 so **vanilla-protocol test clients** (Mineflayer bots) can join **modded
 servers** that would otherwise require a matching modded client.
 

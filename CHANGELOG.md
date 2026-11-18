@@ -4,6 +4,15 @@ All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 versions follow [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+- Repository and npm package renamed from `minecraft-devtest` to
+  **`dsh-plugin-minecraft-devtest`** to follow the DSH bundle naming convention
+  (`dsh-plugin-*`); the bundle row name in `cordis.patch.yml` was updated to the
+  new package name and `engines.dsh` was added.
+- Old GitHub URL redirects to the new repository; all docs/links updated.
+
 ## [0.4.0] - 2026-11-18
 
 ### Added
@@ -71,7 +80,7 @@ versions follow [Semantic Versioning](https://semver.org/).
   helpers.
 - End-to-end verification on vanilla/fabric servers and example datapacks.
 
-[0.4.0]: https://github.com/huiyaoxingkong/minecraft-devtest/compare/v0.3.0...v0.4.0
-[0.3.0]: https://github.com/huiyaoxingkong/minecraft-devtest/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/huiyaoxingkong/minecraft-devtest/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/huiyaoxingkong/minecraft-devtest/releases/tag/v0.1.0
+[0.4.0]: https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest/compare/v0.3.0...v0.4.0
+[0.3.0]: https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest/releases/tag/v0.1.0
