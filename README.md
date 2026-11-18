@@ -113,7 +113,7 @@ Mineflayer 官方只支持 1.8.8 以上、且协议数据通常滞后最新正�
 在 DSH 插件管理器中安装（`target` 可以是本地目录，也可以是 npm 包名/`github:` 地址）：
 
 ```text
-plugin_manager action=install_bundle target=D:\path\to\minecraft-devtest
+plugin_manager action=install_bundle target=D:\path\to\dsh-plugin-minecraft-devtest
 plugin_manager action=install_bundle target=dsh-plugin-minecraft-devtest  # 发布到 npm 之后
 ```
 
@@ -131,16 +131,39 @@ npm run check        # 语法检查
 npm run test:unit    # 不需要 Minecraft 服务端的离线单测
 ```
 
-把该目录作为 DSH bundle（`target=D:\path\to\minecraft-devtest`）安装即可。
+把该目录作为 DSH bundle（`target=D:\path\to\dsh-plugin-minecraft-devtest`）安装即可。
 
-### 方式三：npm 包（包名已就绪，待发布）
+### 方式三：不需要 npm 账号（GitHub Release tarball / git）
+
+npm 账号注册若被人机验证卡住，可直接用 GitHub 分发：
+
+```text
+# A. 下载 Release 的 npm tarball（含 SHA256 校验文件）
+https://github.com/huiyaoxingkong/dsh-plugin-minecraft-devtest/releases/download/v0.4.0/dsh-plugin-minecraft-devtest-0.4.0.tgz
+
+# 本地安装 tarball（DSH CLI）
+dsh plugin --profile desktop add ./dsh-plugin-minecraft-devtest-0.4.0.tgz
+# 或在插件管理器里把该 .tgz 作为 target 安装
+plugin_manager action=install_bundle target=D:\path\dsh-plugin-minecraft-devtest-0.4.0.tgz
+```
+
+```text
+# B. 直接从 GitHub git 安装（本包是纯 JS，没有 build 脚本，无需 allowBuilds）
+dsh plugin --profile desktop add github:huiyaoxingkong/dsh-plugin-minecraft-devtest
+```
+
+> tarball 由 `npm pack` 生成（与将来 npm 上的内容一致）：1.1MB / 解包 14.9MB / 253 文件；
+> SHA256 见 Release 附件 `.tgz.sha256`（`0ba70ebeb2a386d8427d787486568d05b8b5f51c6c44d321e5274487beb12d02`）。
+
+### 方式四：npm 包（包名已就绪，待发布）
 
 ```bash
 npm install dsh-plugin-minecraft-devtest
 ```
 
-> **发布状态**：截至 2026-11-19 npm 包尚未公开发布（机器上 npm 未登录），请先用方式一/方式二（GitHub 源码或本地目录）。
+> **发布状态**：npm 账号注册/人机验证尚未完成，包尚未发布；请先用方式一/二/三（本地目录、GitHub 源码、Release tarball）。
 > 维护者发布：本机 `npm login` 后执行 `npm publish`（包已通过 `npm pack --dry-run` 校验：`dsh-plugin-minecraft-devtest@0.4.0`，tarball 1.1MB）。
+> 如果 npm 注册一直被 CAPTCHA 拦住：可换用手机蜂窝网络/无痕窗口、关闭广告拦截/VPN，或尝试 npm 登录页的 GitHub 登录；实在不行就保持 GitHub tarball/git 分发（功能完全一致，DSH 能从 tarball/git 安装）。
 
 npm 包面向两类用户：DSH 插件（`dsh.bundle.patch` 已包含）和希望在 Node 里直接复用
 `lib/` 模块的开发者。运行游戏/服务端相关能力仍需本机安装 Java 与测试服 jar。

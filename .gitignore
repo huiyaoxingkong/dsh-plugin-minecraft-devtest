@@ -7,3 +7,4 @@ Thumbs.db
 *.dsh-backup
 dist/
 coverage/
+*.tgz
